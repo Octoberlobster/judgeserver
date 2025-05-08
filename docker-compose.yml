@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  judge_server:
+    image: judge_server
+    #volumes:
+    #  - your_problems:/home/judge_server/problems
+    environment:
+      - server_ip=as-wheel-regression-canadian.trycloudflare.com
+      - PORT=443
+      - TOKEN=X1EHJsb6RfN+X4hMX9GqV2ZrVhdlG0vNxwm7EwhUAIuHT1bG9aEQoxpocQRFshseT/07ih1XzNluSF7k4eHNlADTYsnpHdw+grD5
+      - judge_server_id=judge
+    tty: true # 可選
+    stdin_open: true # 可選
